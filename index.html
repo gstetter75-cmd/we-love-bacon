@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WE LOVE BACON!!!</title>
+  <style>
+    body {
+      background-color: #FF6600;
+      background-image: repeating-linear-gradient(
+        45deg,
+        #FF6600 0px,
+        #FF6600 10px,
+        #FFCC00 10px,
+        #FFCC00 20px
+      );
+      font-family: "Comic Sans MS", "Comic Sans", cursive;
+      margin: 0;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .main-table {
+      width: 780px;
+      margin: 0 auto;
+      background-color: #FFFFCC;
+      border: 5px ridge #FF0000;
+      padding: 10px;
+    }
+
+    h1 {
+      font-size: 52px;
+      color: #FF0000;
+      text-shadow: 4px 4px 0px #000000, -2px -2px 0px #FF6600;
+      letter-spacing: 4px;
+      margin: 10px 0;
+      font-family: Impact, "Comic Sans MS", cursive;
+      text-transform: uppercase;
+    }
+
+    .rainbow {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    .rainbow span:nth-child(1)  { color: #FF0000; }
+    .rainbow span:nth-child(2)  { color: #FF4400; }
+    .rainbow span:nth-child(3)  { color: #FF8800; }
+    .rainbow span:nth-child(4)  { color: #FFCC00; }
+    .rainbow span:nth-child(5)  { color: #00BB00; }
+    .rainbow span:nth-child(6)  { color: #0000FF; }
+    .rainbow span:nth-child(7)  { color: #8800BB; }
+    .rainbow span:nth-child(8)  { color: #FF0088; }
+    .rainbow span:nth-child(9)  { color: #00AACC; }
+    .rainbow span:nth-child(10) { color: #FF0000; }
+    .rainbow span:nth-child(11) { color: #00BB00; }
+    .rainbow span:nth-child(12) { color: #FF4400; }
+    .rainbow span:nth-child(13) { color: #0000FF; }
+    .rainbow span:nth-child(14) { color: #FFCC00; }
+    .rainbow span:nth-child(15) { color: #8800BB; }
+    .rainbow span:nth-child(16) { color: #FF0000; }
+    .rainbow span:nth-child(17) { color: #00AACC; }
+    .rainbow span:nth-child(18) { color: #FF8800; }
+    .rainbow span:nth-child(19) { color: #FF0088; }
+    .rainbow span:nth-child(20) { color: #00BB00; }
+
+    .blink {
+      animation: blink 0.7s step-end infinite;
+      color: #FF0000;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    @keyframes blink {
+      50% { visibility: hidden; }
+    }
+
+    marquee {
+      background-color: #FF0000;
+      color: #FFFF00;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 6px 0;
+      border: 3px solid #000000;
+    }
+
+    .section-box {
+      border: 4px groove #FF6600;
+      background-color: #FFE4E1;
+      margin: 12px 0;
+      padding: 10px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      color: #CC0000;
+      font-weight: bold;
+      text-decoration: underline overline;
+      margin-bottom: 8px;
+    }
+
+    .bacon-ascii {
+      font-family: "Courier New", monospace;
+      font-size: 13px;
+      color: #8B0000;
+      background-color: #FFF8DC;
+      border: 2px dashed #FF6600;
+      padding: 10px;
+      white-space: pre;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .facts-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .facts-table td {
+      border: 2px solid #FF6600;
+      padding: 6px 10px;
+      background-color: #FFFACD;
+      font-size: 15px;
+    }
+    .facts-table tr:nth-child(even) td {
+      background-color: #FFE4B5;
+    }
+    .facts-table .num {
+      font-size: 22px;
+      color: #FF0000;
+      font-weight: bold;
+      width: 40px;
+      text-align: center;
+    }
+
+    .guestbook {
+      background-color: #E0F0FF;
+      border: 3px double #0000FF;
+      padding: 10px;
+      margin: 12px 0;
+    }
+    .guestbook input, .guestbook textarea {
+      font-family: "Comic Sans MS", cursive;
+      border: 2px inset #AAAAAA;
+      background-color: #FFFACD;
+      font-size: 14px;
+      padding: 3px;
+      width: 90%;
+      margin: 4px 0;
+    }
+    .guestbook button {
+      background-color: #FF6600;
+      color: #FFFFFF;
+      font-family: "Comic Sans MS", cursive;
+      font-size: 16px;
+      font-weight: bold;
+      border: 3px outset #AAAAAA;
+      padding: 5px 20px;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+    .guestbook button:active {
+      border-style: inset;
+    }
+
+    .counter-box {
+      background-color: #000000;
+      color: #00FF00;
+      font-family: "Courier New", monospace;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 6px;
+      padding: 6px 18px;
+      display: inline-block;
+      border: 3px solid #00FF00;
+      margin: 8px 0;
+    }
+
+    .nav-bar {
+      background-color: #FF0000;
+      padding: 6px;
+      border: 3px groove #880000;
+      margin-bottom: 12px;
+    }
+    .nav-bar a {
+      color: #FFFF00;
+      font-weight: bold;
+      font-size: 16px;
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 2px 8px;
+      border: 2px outset #FFAA00;
+      background-color: #CC0000;
+    }
+    .nav-bar a:hover {
+      background-color: #FFAA00;
+      color: #000000;
+    }
+
+    .stars {
+      font-size: 28px;
+      letter-spacing: 6px;
+    }
+
+    .under-construction {
+      background-color: #FFFF00;
+      border: 4px solid #000000;
+      padding: 8px;
+      margin: 10px auto;
+      width: fit-content;
+      font-size: 18px;
+      font-weight: bold;
+      color: #000000;
+      animation: wiggle 0.5s ease-in-out infinite alternate;
+    }
+    @keyframes wiggle {
+      from { transform: rotate(-2deg); }
+      to   { transform: rotate(2deg);  }
+    }
+
+    .spin-bacon {
+      display: inline-block;
+      font-size: 48px;
+      animation: spin 3s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    .footer {
+      font-size: 11px;
+      color: #666666;
+      border-top: 2px solid #FF6600;
+      padding-top: 8px;
+      margin-top: 10px;
+    }
+
+    .best-viewed {
+      background-color: #CCFFCC;
+      border: 2px dashed #006600;
+      padding: 5px;
+      font-size: 12px;
+      color: #004400;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="main-table">
+
+  <!-- HEADER -->
+  <div class="stars">* * * * * * * * * * *</div>
+
+  <h1>WE LOVE BACON!!!</h1>
+
+  <!-- YOUTUBE VIDEO -->
+  <div style="margin: 12px 0; border: 5px ridge #FF0000; display: inline-block; background: #000;">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/Uawwk7nb_5Q?autoplay=1&mute=0"
+      title="WE LOVE BACON VIDEO"
+      frameborder="0"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <br><br>
+
+  <div class="rainbow">
+    <span>T</span><span>H</span><span>E</span><span> </span>
+    <span>W</span><span>O</span><span>R</span><span>L</span><span>D</span><span>'</span><span>S</span><span> </span>
+    <span>B</span><span>E</span><span>S</span><span>T</span><span> </span>
+    <span>F</span><span>O</span><span>O</span><span>D</span>
+  </div>
+
+  <br>
+
+  <!-- NAVIGATION -->
+  <div class="nav-bar">
+    <a href="#">Home</a>
+    <a href="#">Recipes</a>
+    <a href="#">Gallery</a>
+    <a href="#">Forum</a>
+    <a href="#">Links</a>
+    <a href="#">Guestbook</a>
+  </div>
+
+  <!-- MARQUEE -->
+  <marquee behavior="scroll" direction="left" scrollamount="5">
+    &nbsp;&nbsp;&nbsp; BACON IS LIFE !!! &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+    SIZZLE SIZZLE SIZZLE !!! &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+    THE MORE BACON THE BETTER !!! &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+    WELCOME TO THE GREATEST WEBSITE IN THE WORLD !!! &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+    LAST UPDATED: JUNE 10, 1998 &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+  </marquee>
+
+  <br>
+
+  <!-- SPINNING BACON + BLINK -->
+  <div class="spin-bacon">&#x1F953;</div>
+  <div class="spin-bacon" style="animation-direction:reverse;">&#x1F953;</div>
+  <div class="spin-bacon">&#x1F953;</div>
+
+  <br><br>
+
+  <div class="blink">~~~ WELCOME, BACON LOVER !!! ~~~</div>
+
+  <br>
+
+  <!-- ASCII BACON -->
+  <div class="section-box">
+    <div class="section-title">--- ASCII BACON ART ---</div>
+    <div class="bacon-ascii">
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~  ___           ___           ___           _  ~
+  ~ / _ )__ _ ___ / _ \___  ____/ (_)__  ___  | | ~
+  ~/ _  / // / _ / // / _ \/ __/ / / _ \/ _ \ |_| ~
+  /____/\_,_/\__/____/\___/_/ /_/_/\___/_//_/ (_)  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  &lt;======= CRISPY &amp; DELICIOUS SINCE FOREVER =======&gt;
+    </div>
+  </div>
+
+  <!-- FACTS -->
+  <div class="section-box">
+    <div class="section-title">*** TOP 5 BACON FACTS ***</div>
+    <table class="facts-table">
+      <tr>
+        <td class="num">1.</td>
+        <td>Bacon is made from PORK BELLY and is the most perfect food ever created by mankind!!!</td>
+      </tr>
+      <tr>
+        <td class="num">2.</td>
+        <td>Scientists have proven* that the smell of frying bacon makes you 300% HAPPIER!!! (*probably)</td>
+      </tr>
+      <tr>
+        <td class="num">3.</td>
+        <td>Bacon goes with EVERYTHING: eggs, burgers, pizza, ice cream, and even MORE BACON!!!</td>
+      </tr>
+      <tr>
+        <td class="num">4.</td>
+        <td>There are over 1,000,000,000 strips of bacon eaten worldwide every single day. WOW!!!</td>
+      </tr>
+      <tr>
+        <td class="num">5.</td>
+        <td>The word "BACON" has never been said with a frown. It is PHYSICALLY IMPOSSIBLE!!!</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- POLL -->
+  <div class="section-box">
+    <div class="section-title">--- POLL OF THE WEEK ---</div>
+    <b>How do you like your bacon?</b><br><br>
+    <form onsubmit="vote(event)">
+      <input type="radio" name="bacon" value="crispy" checked> SUPER CRISPY (the only right answer)<br>
+      <input type="radio" name="bacon" value="chewy"> Chewy and soft<br>
+      <input type="radio" name="bacon" value="raw"> Raw (weirdo!!)<br>
+      <input type="radio" name="bacon" value="all"> ALL OF IT ALL THE TIME<br>
+      <br>
+      <button type="submit" style="background:#FF6600;color:#FFF;font-family:'Comic Sans MS',cursive;font-size:16px;font-weight:bold;border:3px outset #AAA;padding:5px 20px;cursor:pointer;">
+        VOTE NOW!!!
+      </button>
+    </form>
+    <div id="poll-result" style="display:none;color:#006600;font-weight:bold;margin-top:8px;font-size:18px;">
+      YOUR VOTE HAS BEEN RECORDED!!! THANK YOU FOR LOVING BACON!!!
+    </div>
+  </div>
+
+  <!-- GUESTBOOK -->
+  <div class="guestbook">
+    <div class="section-title">~~~ SIGN THE GUESTBOOK ~~~</div>
+    <b>Your Name:</b><br>
+    <input type="text" placeholder="e.g. BaconLover2000"><br>
+    <b>Your Message:</b><br>
+    <textarea rows="3" placeholder="Tell us why you LOVE BACON!!!"></textarea><br>
+    <button onclick="submitGuestbook()">SIGN GUESTBOOK!!!</button>
+    <div id="guest-result" style="display:none;color:#CC0000;font-weight:bold;margin-top:8px;font-size:16px;">
+      THANK YOU FOR SIGNING!!! YOU ARE OFFICIALLY A BACON LEGEND!!!
+    </div>
+  </div>
+
+  <!-- COUNTER -->
+  <div class="section-box">
+    <div class="section-title">*** VISITOR COUNTER ***</div>
+    You are visitor number:<br>
+    <div class="counter-box" id="counter">0001337</div><br>
+    <small>(WOW so many bacon lovers!!!)</small>
+  </div>
+
+  <!-- UNDER CONSTRUCTION -->
+  <div class="under-construction">
+    &#9888; THIS PAGE IS UNDER CONSTRUCTION &#9888;<br>
+    <small>More bacon content coming SOON!!!</small>
+  </div>
+
+  <!-- BEST VIEWED -->
+  <div class="best-viewed">
+    Best viewed in Netscape Navigator 4.0 at 800x600 resolution with JavaScript enabled.
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    &copy; 1998 WeLoveBacon.net &nbsp;&bull;&nbsp;
+    All rights reserved &nbsp;&bull;&nbsp;
+    Made with &lt;3 and lots of BACON &nbsp;&bull;&nbsp;
+    No pigs were harmed in the making of this website (well...) &nbsp;&bull;&nbsp;
+    <a href="mailto:webmaster@welovebacon.net">webmaster@welovebacon.net</a>
+    <br><br>
+    <img src="https://img.shields.io/badge/Netscape-Compatible-green" alt="Netscape Compatible" style="height:20px">
+    &nbsp;
+    <img src="https://img.shields.io/badge/HTML-3.2-orange" alt="HTML 3.2" style="height:20px">
+    &nbsp;
+    <img src="https://img.shields.io/badge/Bacon-100%25-red" alt="100% Bacon" style="height:20px">
+  </div>
+
+</div>
+
+<script>
+  // Simulate rising counter
+  let count = 1337;
+  setInterval(function() {
+    count++;
+    document.getElementById('counter').textContent = String(count).padStart(7, '0');
+  }, 3000);
+
+  function vote(e) {
+    e.preventDefault();
+    document.getElementById('poll-result').style.display = 'block';
+  }
+
+  function submitGuestbook() {
+    document.getElementById('guest-result').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
