@@ -500,7 +500,7 @@
   <div class="section-box">
     <div class="section-title">*** VISITOR COUNTER ***</div>
     You are visitor number:<br>
-    <div class="counter-box" id="counter">0001337</div><br>
+    <div class="counter-box" id="counter">......</div><br>
     <small>(WOW so many bacon lovers!!!)</small>
   </div>
 
@@ -556,12 +556,15 @@
 </div>
 
 <script>
-  // Simulate rising counter
-  let count = 1337;
-  setInterval(function() {
-    count++;
-    document.getElementById('counter').textContent = String(count).padStart(7, '0');
-  }, 3000);
+  // Real visitor counter via counterapi.dev
+  fetch('https://api.counterapi.dev/v1/welovebacon/visitors/up')
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      document.getElementById('counter').textContent = String(data.value).padStart(7, '0');
+    })
+    .catch(function() {
+      document.getElementById('counter').textContent = '???????';
+    });
 
   function vote(e) {
     e.preventDefault();
