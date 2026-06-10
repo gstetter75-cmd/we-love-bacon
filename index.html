@@ -6,14 +6,29 @@
   <title>WE LOVE BACON!!!</title>
   <style>
     body {
-      background-color: #FF6600;
-      background-image: repeating-linear-gradient(
-        45deg,
-        #FF6600 0px,
-        #FF6600 10px,
-        #FFCC00 10px,
-        #FFCC00 20px
-      );
+      background-color: #FFFFFF;
+      background-image:
+        /* England flag: vertical red cross bar */
+        repeating-linear-gradient(
+          90deg,
+          transparent 0px,
+          transparent calc(50% - 22px),
+          #CC0000 calc(50% - 22px),
+          #CC0000 calc(50% + 22px),
+          transparent calc(50% + 22px),
+          transparent 100%
+        ),
+        /* England flag: horizontal red cross bar */
+        repeating-linear-gradient(
+          0deg,
+          transparent 0px,
+          transparent calc(50% - 22px),
+          #CC0000 calc(50% - 22px),
+          #CC0000 calc(50% + 22px),
+          transparent calc(50% + 22px),
+          transparent 100%
+        );
+      background-attachment: fixed;
       font-family: "Comic Sans MS", "Comic Sans", cursive;
       margin: 0;
       padding: 10px;
