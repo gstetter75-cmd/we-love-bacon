@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WE LOVE BACON!!!</title>
   <style>
     body {
@@ -20,15 +21,17 @@
     }
 
     .main-table {
-      width: 780px;
+      width: 100%;
+      max-width: 780px;
       margin: 0 auto;
       background-color: #FFFFCC;
       border: 5px ridge #FF0000;
       padding: 10px;
+      box-sizing: border-box;
     }
 
     h1 {
-      font-size: 52px;
+      font-size: clamp(28px, 8vw, 52px);
       color: #FF0000;
       text-shadow: 4px 4px 0px #000000, -2px -2px 0px #FF6600;
       letter-spacing: 4px;
@@ -142,8 +145,10 @@
       background-color: #FFFACD;
       font-size: 14px;
       padding: 3px;
-      width: 90%;
+      width: 100%;
+      max-width: 90%;
       margin: 4px 0;
+      box-sizing: border-box;
     }
     .guestbook button {
       background-color: #FF6600;
@@ -253,10 +258,9 @@
   <h1>WE LOVE BACON!!!</h1>
 
   <!-- YOUTUBE VIDEO -->
-  <div style="margin: 12px 0; border: 5px ridge #FF0000; display: inline-block; background: #000;">
+  <div style="margin: 12px auto; border: 5px ridge #FF0000; background: #000; position: relative; width: 100%; max-width: 560px; aspect-ratio: 16/9;">
     <iframe
-      width="560"
-      height="315"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
       src="https://www.youtube.com/embed/Uawwk7nb_5Q?autoplay=1&mute=0"
       title="WE LOVE BACON VIDEO"
       frameborder="0"
